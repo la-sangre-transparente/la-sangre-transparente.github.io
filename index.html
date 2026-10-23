@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La sangre transparente de esta ciudad · Mecánicas inmersivas 2026</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Solo para el mapa (slide 5). style.css no se toca. */
+  .gbox { position:absolute; top:6.5rem; bottom:4.5rem; left:0; right:0; z-index:1; }
+  #gsvg { width:100%; height:100%; display:block; }
+  .gt { position:absolute; top:2.2rem; left:6vw; z-index:3; pointer-events:none; }
+  .gt h2 { margin:0; }
+  .lg { position:absolute; left:6vw; bottom:4.4rem; z-index:3; display:flex; flex-direction:column; gap:.5rem; font-size:.95rem; color:var(--cream); opacity:.85; }
+  .lg i { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:.6rem; }
+  .hint { position:absolute; right:6vw; bottom:4.4rem; z-index:3; font-size:.9rem; color:var(--cream); opacity:.6; text-align:right; line-height:1.7; }
+  #tip { position:fixed; pointer-events:none; opacity:0; background:rgba(14,14,14,.94); border-left:2px solid var(--accent); padding:12px 14px; font-size:1rem; color:var(--cream); max-width:290px; line-height:1.5; transition:opacity .12s; z-index:200; }
+  #tip b { display:block; color:var(--accent); font-weight:500; margin-bottom:4px; }
+  #cap { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:4; background:#fff; color:#000; font-size:1.25rem; line-height:1.7; padding:.1em .6em; text-align:center; max-width:60vw; pointer-events:none; transition:opacity .2s; opacity:0; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  @media (max-width:768px){ .hint{display:none} .lg{font-size:.8rem} }
+</style>
+</head>
+<body>
+
+<div class="deck">
+<!-- SLIDE 1 · PORTADA -->
+  <div class="slide active" id="s1">
+            <div class="slide-bg" style="background-image:url('img/nemontemi_4032x2268_2026-10-23T12-31-25.png');"></div>
+    <div class="slide-content center">
+      <div class="label" style="font-size:clamp(14px,2vw,17px);">Mecánicas inmersivas · Centro Multimedia · 2026</div>
+      <br>
+      <div class="label" style="font-size:25px;color:var(--white);opacity:1;line-height:1.2;">La sangre transparente<br>de esta ciudad:</div>
+      <div class="label" style="font-size:25px;color:var(--accent);opacity:1;line-height:1.2;margin-top:.5rem;">Memoria hídrica<br>de la voz</div>
+      <div class="divider" style="margin: 1.4rem auto;"></div>
+      <p style="font-size: 22px; text-align:center; max-width:520px; margin:auto;">
+        Lola Langarica · Rodrigo Velasco · 2026
+      </p>
+    </div>
+  </div>
+  <!-- SLIDE 2 · LA PIEZA -->
+  <div class="slide" id="s2">
+        <div class="slide-bg" style="background-image:url('img/memoria-03.png');"></div>
+    <div class="slide-content left">
+      <div class="label">01 · La pieza</div>
+      <h2>Lo que corre bajo el asfalto</h2>
+      <div class="divider"></div>
+      <p><em style="color:var(--accent);">La sangre transparente de esta ciudad: Memoria hídrica de la voz</em> <br>es una obra generativa de 8 canales que improvisamos en tiempo real, a partir de una investigación sonora y poética sobre la memoria hídrica de los territorios que hoy ocupa la Ciudad de México.</p>
+      <p>Río Consulado, Río Churubusco, La Piedad y decenas de cauces más corren entubados bajo el asfalto que habitamos. Nos preguntamos qué queda de esos cuerpos de agua, qué vibración persiste y qué memoria puede aún escucharse.</p>
+      <p>Es un proyecto de investigación-creación en proceso, y esta es la <em style="color:var(--accent);">primera muestra</em>: paisaje sonoro, poesía, lectura, improvisación audiovisual y un diálogo entre dos prácticas que se cruzan.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 · LOLA -->
+  <!-- Lola: reemplaza o completa esta diapositiva con tu proceso. -->
+  <div class="slide" id="s3">
+    <div class="slide-bg"></div>
+    <div class="slide-content left">
+      <div class="label">02 · Poesía, voz y escritura <br><span style="font-size: 0.7em;"> Lola Langarica</span></div>
+      <h2>El agua como sujeto</h2>
+      <div class="divider"></div>
+      <p>Desplegar la voz y la escritura en vivo como material que reconoce al agua como sujeto de memoria, resistencia y transformación.</p>
+      <div class="trio" style="text-align:left;">
+        <div class="trio-item"><h3>*</h3><p>Escucha situada: escuchar desde el territorio y su historia.</p></div>
+        <div class="trio-item"><h3>/</h3><p>Ecología política urbana: qué se borró cuando se enterraron los ríos, y por decisión de quién.</p></div>
+        <div class="trio-item"><h3>~</h3><p>Memoria y cuidado: escribo textos como <em style="color:var(--accent);">La sangre transparente</em> y <em style="color:var(--accent);">Espejo de agua</em>, hacia una escucha que cuida y un gesto que resiste.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 · RODRIGO -->
+  <div class="slide" id="s4">
+    <div class="slide-bg" style="background-image:url('img/yecto_adentro2.png');"></div>
+    <div class="slide-content left">
+<div class="label">03 · Paisaje, cinta y escucha <br><span style="font-size: 0.7em;">Rodrigo Velasco</span></div>
+      <h2>Improvisar con la memoria</h2>
+      <div class="divider"></div>
+      <p>Una arquitectura sonora con herramientas de espacialización de audio creadas en SuperCollider: el flujo de los ríos y de las avenidas, material de archivo y grabaciones propias, y un eco de cinta que graba y devuelve lo que toco. No hay secuencias. Los visuales son shaders creados en <em style="color:var(--accent);">Nemontemi</em>, una herramienta propia en construcción para hacer live coding de visuales</p>
+      <div class="trio" style="text-align:left;">
+        <div class="trio-item"><h3>*</h3><p>Poéticas relacionales: con Glissant; reciprocidad entre voz, sonido, código e imagen donde ninguno domina.</p></div>
+        <div class="trio-item"><h3>/</h3><p>Hauntología: los ríos como presencia de algo ausente; la cinta como un pasado que no termina de irse.</p></div>
+        <div class="trio-item"><h3>~</h3><p>Escucha profunda: atender el entorno completo, como práctica de conocimiento.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE · MANOS, GESTO Y TACTO (id s8: cambia la foto del cuenco en el background inline) -->
+  <div class="slide" id="s8">
+    <div class="slide-bg" style="background-image:url('img/858972039_18635978245039268_4350346741968650320_n.jpg');background-position: center 82%;"></div>
+    <div class="slide-content left">
+      <div class="label">04 · Manos, gesto y tacto</div>
+      <h2>Volver al gesto</h2>
+      <div class="divider"></div>
+      <p>Repensar lo digital desde lo análogo y la colaboración. Gracias al programa de asesorías del Centro Multimedia, Gonzalo Tonatiuh Alonso Torres y la banda del Taller de Audio nos ayudaron a armar micrófonos de contacto, parte fundamental de la pieza, para escuchar un cuenco de agua. Tomamos distancia y volvimos a la programación desde lo artesanal. Ese cruce abrió la pieza a otros procesos y lenguajes.</p>
+      <div class="trio" style="text-align:left;">
+        <div class="trio-item"><h3>*</h3><p>El gesto de las manos.</p></div>
+        <div class="trio-item"><h3>/</h3><p>Regresarle el tacto al agua.</p></div>
+        <div class="trio-item"><h3>~</h3><p>Procesos y lenguajes análogos</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 · MAPA INTERACTIVO (D3) -->
+  <div class="slide" id="s5">
+        <div class="slide-bg" style="background-image:url('img/IMG_9927.jpg');"></div>
+    <div class="gbox" id="graph"><svg id="gsvg"></svg></div>
+    <div class="gt">
+      <div class="label">05 · Donde se cruzan los cauces</div>
+      <h2>Confluencias</h2>
+    </div>
+    <div class="lg">
+      <span><i style="background:rgb(146,203,221)"></i>Lola Langarica</span>
+      <span><i style="background:rgb(174,146,181)"></i>Rodrigo Velasco</span>
+      <span><i style="background:rgb(93,211,158)"></i>Ideas compartidas</span>
+      <span><i style="background:rgb(188,231,132)"></i>Territorio y ciudad</span>
+    </div>
+    <mark id="cap"></mark>
+    <!--<div class="hint">arrastra los nodos</div-->
+  </div>
+
+  <!-- SLIDE 6 — WORKSHOP / RESIDENCY / AFFECTIVE MAP -->
+  <div class="slide" id="s6">
+        <div class="slide-bg" style="background-image:url('img/IMG_9930.JPG');"></div>
+    <div class="slide-content left" style="max-width:1100px; width:100%;">
+      <div class="label">06 · México-Tenochtitlan hacia 1550</div>
+      <div class="grid-two">
+        <div>
+          <h2>Cartografías del Valle de México</h2>
+          <div class="divider"></div>
+          <p style="max-width:none;"><em style="color:var(--accent);">Mapa de México Tenochtitlan y sus contornos hacia 1550</em>, edición de Miguel León-Portilla y Carmen Aguilera, es un referente central de nuestro proceso.</p>
+          <p style="max-width:none;">Ahí vemos la traza, las acequias y cómo el flujo del agua determinó la ciudad, junto con escenas de la vida cotidiana: caza, pesca, agricultura, pastoreo, transporte.</p>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:center;">
+          <blockquote style="margin:0; max-width:none;">
+            <p style="max-width:none;">Los glifos toponímicos guardan otra memoria: algunos llevan el signo del agua, como el de Acolman, una corriente que desciende, y otros incluyen animales que aluden a las prácticas de cada lugar.</p>
+            <p style="max-width:none;">Para los autores, el mapa lleva un mensaje ecológico: el contraste con la ciudad de hoy es doloroso.</p>
+            <cite>León-Portilla y Aguilera</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7 · LO QUE SIGUE -->
+  <div class="slide" id="s7">
+        <div class="slide-bg" style="background-image:url('img/nemontemi_4032x2268_2026-10-23T12-24-48.png');"></div>
+    <div class="slide-content left">
+      <div class="label">07 · Un proceso abierto</div>
+      <h2>El cauce sigue</h2>
+      <div class="divider"></div>
+      <p>Primera muestra de un proceso abierto.</p>
+      <div class="trio" style="text-align:left;">
+        <div class="trio-item"><h3>*</h3><p>Relacionarnos con los entornos: llevar la pieza a los lugares donde aún viven los lagos, como Xochimilco.</p></div>
+        <div class="trio-item"><h3>/</h3><p>El urbanismo y la arquitectura: cómo el agua trazó la ciudad.</p></div>
+
+        <div class="trio-item"><h3>~</h3><p>Recorrer y grabar en sitio, para escuchar lo que hoy corre bajo las avenidas.</p></div>
+      </div>
+      <div class="divider" style="margin-top:2rem;"></div>
+      <p style="opacity:0.65; font-size:1rem; letter-spacing:0.1em;">
+        Lola Langarica &nbsp;/&nbsp; Rodrigo Velasco &nbsp;/&nbsp; Centro Multimedia 2026
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- UI -->
+<div class="slide-num" id="slideNum">01 / 08</div>
+<div class="arrow prev" id="prevBtn">← anterior</div>
+<div class="arrow next" id="nextBtn">siguiente →</div>
+<div class="nav" id="navDots"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const numEl  = document.getElementById('slideNum');
+  const dots   = document.getElementById('navDots');
+  let cur = 0;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => go(i);
+    dots.appendChild(d);
+  });
+
+  function go(n) {
+    slides[cur].classList.remove('active');
+    dots.children[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dots.children[cur].classList.add('active');
+    numEl.textContent = String(cur + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+  }
+
+  document.getElementById('nextBtn').onclick = () => go(cur + 1);
+  document.getElementById('prevBtn').onclick = () => go(cur - 1);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') go(cur + 1);
+    if (e.key === 'ArrowLeft') go(cur - 1);
+  });
+
+  let tx = 0;
+  document.addEventListener('touchstart', e => tx = e.touches[0].clientX);
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) dx < 0 ? go(cur + 1) : go(cur - 1);
+  });
+
+  // ── MAPA (slide 5) ──────────────────────────────────────────────
+  // [id, etiqueta, tipo, radio, fragmento de nuestros textos (opcional)]
+  const K = 1.25;
+  const N = [
+    ['memoria','Memoria hídrica','com',54,'¿Qué memoria puede aún escucharse?'],
+    ['rios','Ríos entubados','terr',36,'Corren invisibles como infraestructura de drenaje bajo el asfalto.'],
+    ['valle','Valle de México','terr',42,''],
+    ['crisis','Crisis del agua','terr',36,'Ecología política urbana.'],
+    ['vciudad','Voz de la ciudad','terr',40,'¿Qué vibración persiste bajo el asfalto?'],
+    ['voz','Voz','lola',30,''],
+    ['escritura','Escritura poética','lola',36,''],
+    ['sujeto','Agua como sujeto','lola',38,'Sujeto de memoria, resistencia y transformación.'],
+    ['escucha','Escucha que cuida','lola',38,'Una escucha que cuida, un gesto que resiste.'],
+    ['paisaje','Paisaje sonoro','erre',38,'Una red de resonancias que llevan al oído la memoria del agua.'],
+    ['cinta','Cinta','erre',30,''],
+    ['improv','Improvisación','erre',46,''],
+    ['nemon','Nemontemi','erre',36,''],
+    ['ocho','Espacialización del audio','erre',46,''],
+    ['relacion','Poéticas relacionales','com',48,''],
+    ['haunt','Hauntología','com',44,''],
+    ['deep','Escucha profunda','com',38,''],
+    ['cuidado','Cuidado','com',32,'Una práctica de memoria y cuidado.'],
+    ['poetico','Lo poético','com',34,''],
+    ['contacto','Micrófonos de contacto','com',44,''],
+    ['gesto','Gesto y tacto','com',36,'Regresarle el tacto al agua.'],
+    ['artesanal','Lo artesanal','com',34,'']
+  ].map(([id,label,type,r,f],i) => ({id,label,type,r:r*K,f,s:i*1.7}));
+
+  const L = [
+    ['memoria','rios'],['memoria','vciudad'],['memoria','cinta'],['memoria','paisaje'],['memoria','improv'],
+    ['memoria','relacion'],['memoria','haunt'],['memoria','cuidado'],['memoria','sujeto'],
+    ['rios','valle'],['rios','crisis'],['valle','haunt'],['valle','sujeto'],['crisis','cuidado'],
+    ['vciudad','paisaje'],['vciudad','voz'],['voz','escritura'],['escritura','sujeto'],['sujeto','cuidado'],
+    ['escucha','cuidado'],['escucha','deep'],['deep','paisaje'],['cinta','haunt'],['cinta','improv'],
+    ['improv','nemon'],['nemon','ocho'],['ocho','paisaje'],['relacion','nemon'],['relacion','voz'],
+    ['poetico','escritura'],['poetico','relacion'],
+    ['contacto','gesto'],['gesto','sujeto'],['gesto','escritura'],['contacto','paisaje'],
+    ['artesanal','nemon'],['artesanal','escritura'],['contacto','artesanal']
+  ].map(([source,target]) => ({source,target}));
+
+  const RGB = { lola:'146,203,221', erre:'174,146,181', com:'93,211,158', terr:'188,231,132' };
+  const box = document.getElementById('graph');
+  const cap = document.getElementById('cap');
+  let W = box.clientWidth, H = box.clientHeight;
+  const svg = d3.select('#gsvg').attr('viewBox', `0 0 ${W} ${H}`);
+  ['touchstart','touchend'].forEach(t => document.getElementById('gsvg').addEventListener(t, e => e.stopPropagation()));
+
+  let t = 0;
+  const sim = d3.forceSimulation(N)
+    .force('link', d3.forceLink(L).id(d => d.id).distance(150).strength(0.2))
+    .force('charge', d3.forceManyBody().strength(d => -d.r * 22))
+    .force('collide', d3.forceCollide(d => d.r + 14))
+    .force('center', d3.forceCenter(W / 2, H / 2))
+    .force('x', d3.forceX(W / 2).strength(0.03))
+    .force('y', d3.forceY(H / 2).strength(0.14))
+    .force('drift', () => { t += 0.012; N.forEach(d => { d.vx += Math.sin(t + d.s) * 0.09; d.vy += Math.cos(t * 0.8 + d.s * 1.3) * 0.05; }); })
+    .alphaTarget(0.03);
+
+  const link = svg.append('g').selectAll('line').data(L).enter().append('line')
+    .attr('stroke', 'rgba(0,0,0,255)').attr('stroke-width', 1.5).attr('stroke-dasharray', '3 5');
+
+  const node = svg.append('g').selectAll('g').data(N).enter().append('g').attr('cursor', 'grab')
+    .on('mouseenter', (e, d) => {
+      cap.textContent = d.f; cap.style.opacity = d.f ? 1 : 0;
+      const near = new Set([d.id]);
+      L.forEach(l => { if (l.source.id === d.id) near.add(l.target.id); if (l.target.id === d.id) near.add(l.source.id); });
+      node.attr('opacity', n => near.has(n.id) ? 1 : 0.25);
+      link.attr('stroke-opacity', l => (l.source.id === d.id || l.target.id === d.id) ? 1 : 0.1);
+    })
+    .on('mouseleave', () => { cap.style.opacity = 0; node.attr('opacity', null); link.attr('stroke-opacity', null); })
+    .call(d3.drag()
+      .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3); d.fx = d.x; d.fy = d.y; })
+      .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0.03); d.fx = null; d.fy = null; }));
+
+  node.append('circle').attr('r', d => d.r)
+    .attr('fill', d => `rgba(${RGB[d.type]},.60)`)
+    .attr('stroke', d => `rgba(${RGB[d.type]},.9)`).attr('stroke-width', d => d.id === 'memoria' ? 1.6 : 0.8);
+
+  node.append('text').attr('text-anchor', 'middle').attr('dominant-baseline', 'central')
+    .attr('fill', '#000').attr('pointer-events', 'none')
+    .attr('font-size', d => d.id === 'memoria' ? 18 : 14)
+    .each(function (d) {
+      const w = d.label.split(' '), lh = d.id === 'memoria' ? 21 : 16, y0 = -((w.length - 1) * lh) / 2;
+      w.forEach((s, i) => d3.select(this).append('tspan').attr('x', 0).attr('y', y0 + i * lh).text(s));
+    });
+
+  sim.on('tick', () => {
+    N.forEach(d => { d.x = Math.max(d.r + 6, Math.min(W - d.r - 6, d.x)); d.y = Math.max(d.r + 6, Math.min(H - d.r - 6, d.y)); });
+    link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+
+  addEventListener('resize', () => {
+    W = box.clientWidth; H = box.clientHeight;
+    svg.attr('viewBox', `0 0 ${W} ${H}`);
+    sim.force('center', d3.forceCenter(W / 2, H / 2)).force('x', d3.forceX(W / 2).strength(0.03)).force('y', d3.forceY(H / 2).strength(0.14)).alpha(0.4).restart();
+  });
+</script>
+</body>
+</html>
